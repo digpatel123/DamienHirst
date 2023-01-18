@@ -3,9 +3,11 @@ from turtle import Turtle, Screen
 jimmy = Turtle()
 jimmy.shape("turtle")
 jimmy.color("blueviolet")
-for i in range(4):
-    jimmy.forward(200)
-    jimmy.right(90)
+for i in range(10):
+    jimmy.pendown()
+    jimmy.forward(10)
+    jimmy.penup()
+    jimmy.forward(10)
 
 screen = Screen()
 
