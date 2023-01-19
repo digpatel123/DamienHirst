@@ -5,15 +5,19 @@ jimmy = Turtle()
 jimmy.shape("turtle")
 jimmy.color("blueviolet")
 colors = ["brown", "khaki", "wheat", "yellow", "orange", "tan", "red2", "dark green", "indigo", "firebrick"]
-
-d = 360
-for i in range(3,11):
-    angle = d/i
+jimmy.pensize(10)
+jimmy.speed(20)
+for i in range(3, 110):
     jimmy.color(random.choice(colors))
-    while i != 0:
-        jimmy.forward(100)
-        jimmy.right(angle)
-        i -= 1
+    jimmy.forward(20)
+    dir = random.choice([1, 2])
+    if dir == 1:
+        jimmy.right(90)
+    else:
+        jimmy.left(90)
+
+
+
 
 
 
