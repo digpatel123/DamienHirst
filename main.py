@@ -5,16 +5,13 @@ jimmy = Turtle()
 jimmy.shape("turtle")
 jimmy.color("blueviolet")
 colors = ["brown", "khaki", "wheat", "yellow", "orange", "tan", "red2", "dark green", "indigo", "firebrick"]
+directions = [0, 90, 180, 270]
 jimmy.pensize(10)
 jimmy.speed(20)
-for i in range(3, 110):
+for i in range(200):
     jimmy.color(random.choice(colors))
+    jimmy.setheading(random.choice(directions))
     jimmy.forward(20)
-    dir = random.choice([1, 2])
-    if dir == 1:
-        jimmy.right(90)
-    else:
-        jimmy.left(90)
 
 
 
