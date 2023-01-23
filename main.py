@@ -12,20 +12,13 @@ def random_color():
     b = random.randint(0, 255)
     return (r, g, b)
 
-
-directions = [0, 90, 180, 270]
-jimmy.pensize(10)
-jimmy.speed(20)
-for i in range(200):
+jimmy.speed("fastest")
+angle = 0
+for i in range(72):
+    jimmy.setheading(angle)
     jimmy.color(random_color())
-    jimmy.setheading(random.choice(directions))
-    jimmy.forward(20)
+    jimmy.circle(100)
+    angle += 5
 
-
-
-
-
-
-screen = Screen()
-
+screen = turtle.Screen()
 screen.exitonclick()
