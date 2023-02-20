@@ -1,31 +1,28 @@
 import random
-import turtle
+import turtle as T
 from turtle import Turtle, Screen
+from color_extraction import rgb_colors
 
-jimmy = Turtle()
-jimmy.shape("turtle")
-turtle.colormode(255)
-
-
-def random_color():
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    return (r, g, b)
-
-
-jimmy.speed("fastest")
-angle = 0
+jim = T.Turtle()
+T.colormode(255)
+jim.penup()
+jim.speed("fastest")
+jim.hideturtle()
+jim.left(225)
+jim.forward(300)
+jim.setheading(0)
 
 
-def spirograph(angle_gap):
-    for i in range(int(360 / angle_gap)):
-        jimmy.color(random_color())
-        jimmy.circle(100)
-        jimmy.setheading(jimmy.heading() + angle_gap)
+for a in range(1, 101):
+    jim.dot(20, random.choice(rgb_colors))
+    jim.forward(50)
 
+    if a % 10 == 0:
+        jim.setheading(90)
+        jim.forward(50)
+        jim.setheading(180)
+        jim.forward(500)
+        jim.setheading(0)
 
-spirograph(5)
-
-screen = turtle.Screen()
+screen = T.Screen()
 screen.exitonclick()
